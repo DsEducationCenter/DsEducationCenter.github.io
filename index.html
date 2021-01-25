@@ -66,19 +66,24 @@
                                             <input type="text" name="Name" class="form-control" placeholder="Your Name" value="" required=""/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Grade" class="form-control" placeholder="Your Grade" value=""/>
+                                            <p>(၁) "မြင်စိုင်းရွှေပြည်" ကဗျာမှ မြင်စိုင်းရွှေပြည်တွင် ဖူးပွင့်သော ရာသီပန်းများကို ဖော်ပြပါ။</p>
+                                            <textarea name="ques1"class="form-control" placeholder="Type Here" value="" required=""></textarea> 
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" name="Phone" class="form-control" placeholder="Phone Number" value="" required=""/>
+                                            <p>(၂) မိဖုရားဖွားစော စကားပြေကို မည်သည်မှ ထုတ်နုတ်ထားသနည်း။</p>
+                                            <textarea name="ques2"class="form-control" placeholder="Type Here" value="" required=""></textarea> 
                                         </div>
                                          <div class="form-group">
-                                            <input type="text" name="Father" class="form-control" placeholder="Your Father Name" value="" required=""/>
+                                             <p>(၃) သိင်္ဃသူသည် မည်သူ၏ သားတော် ဖြစ်သနည်း။ </p>
+                                            <textarea name="ques3"class="form-control" placeholder="Type Here" value="" required=""></textarea> 
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Mother" class="form-control" placeholder="Your Mother Name" value="" required=""/>
+                                            <p>(၄) ရွှေနှင့်ယိုးမှားပန်းစံကား ကဗျာ သည် မည်သည့်ကဗျာ အမျိုးအစား ဖြစ်သနည်း။</p>
+                                            <textarea name="ques4"class="form-control" placeholder="Type Here" value="" required=""></textarea> 
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="Location" class="form-control" placeholder="Your Location" value="" required=""/>
+                                            <p>(၅) သိပ္ပံမောင်ဝ၏ ပထမဆုံး ကလောင်အမည်ကို ဖော်ပြပါ။</p>
+                                            <textarea name="ques5"class="form-control" placeholder="Type Here" value="" required=""></textarea> 
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" name="submit" class="btnSubmit btn-block" value="Send DATA" />
@@ -99,7 +104,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .then(response => alert("Well done and Received......"))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
