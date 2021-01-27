@@ -6,19 +6,41 @@
     <title>DSeducaion</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style>
+            section
+        {
+            background-color: darkorange;
+            width: 100%;
+            margin-top: 0px;
+            border-radius: 15px;
+            z-index: 500;
+            position: fixed;
+            
+        
+        }
+        h1
+        {
+            text-align: center;
+            padding: 0.5%;
+        }
+            
+       h3
+        {
+            padding-top: 25px;
+        }
+        
             .register .nav-tabs .nav-link:hover{
                 border: none;
             }
             .text-align{
-                margin-top: -3%;
+                
                 margin-bottom: -9%;
-
+                margin-top: -3%;
                 padding: 10%;
                 margin-left: 30%;
             }
             .form-new{
-                margin-right: 22%;
-                margin-left: 20%;
+                margin-right: 5%;
+                margin-left: 5%;
             }
             .register-heading{
                 margin-left: 21%;
@@ -32,7 +54,7 @@
             }
             .register{
                 background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
-                margin-top: 3%;
+                
                 padding: 3%;
                 border-radius: 2.5rem;
             }
@@ -50,9 +72,16 @@
                 margin-top: 4%;
             }
     </style>
-
+    
+    
 </head>
 <body>
+    
+    <section>
+    <div class="container">
+      <h1>00:00</h1>
+    </div>
+  </section>
     
 <div class="container register">
             <div class="row">
@@ -117,5 +146,36 @@
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        <script>
+    
+            let timeSecond = 120;
+const timeH = document.querySelector("h1");
+
+displayTime(timeSecond);
+
+const countDown = setInterval(() => {
+  timeSecond--;
+  displayTime(timeSecond);
+  if (timeSecond == 0 || timeSecond < 1) {
+    endCount();
+    clearInterval(countDown);
+  }
+}, 1000);
+
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timeH.innerHTML = `
+  ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+  `;
+}
+
+function endCount() {
+  timeH.innerHTML = "Time out";
+}
+    
+</script>
+    
 </body>
 </html>
